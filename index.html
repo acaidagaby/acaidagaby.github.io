@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Açaí & Delícias</title>
+  <style>
+    /* Reset & base */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Fundo lilás + imagem centralizada sem zoom */
+    body {
+      background: #E8D6FF url('fundo.jpg') no-repeat center center fixed;
+      background-size: contain; /* mostra a imagem inteira */
+    }
+
+    /* Container principal para posicionamentos absolutos */
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Imagens "flutuantes" (coxinha, pote, copo) */
+    .img-float {
+      position: absolute;
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,.25);
+      transition: transform .3s ease;
+    }
+    .img-float:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+
+    /* Posições específicas de cada imagem */
+    #img-coxinha {
+      top: 60px;
+      left: 40px;
+    }
+    #img-pote {
+      top: 60px;
+      right: 40px;
+    }
+    #img-copo {
+      bottom: 40px;
+      left: 40px; /* <–– AGORA NO CANTO INFERIOR‑ESQUERDO */
+    }
+
+    /* Imagem grande de açaí (anteriormente central, agora inferior‑direito) */
+    #img-acai-main {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 260px;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,.25);
+      transition: transform .3s ease;
+    }
+    #img-acai-main:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    /* Botões centrais */
+    .btn-group {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 12px;
+    }
+    .btn-group a {
+      text-decoration: none;
+      background: #8B5CF6; /* roxo médio */
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+      transition: all .25s ease;
+    }
+    .btn-group a:hover {
+      background: #7C3AED;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Imagens suspensas -->
+    <img id="img-coxinha" class="img-float" src="coxinha2.jpg" alt="Coxinha deliciosa" />
+    <img id="img-pote"   class="img-float" src="pote açai.jpg" alt="Pote de açaí" />
+    <img id="img-copo"   class="img-float" src="copo açai.jpg" alt="Copo de açaí" />
+
+    <!-- Imagem principal de açaí (açai.jpg) no canto inferior‑direito -->
+    <img id="img-acai-main" src="acai.jpg" alt="Açaí no canto" />
+
+    <!-- Botões centrais -->
+    <div class="btn-group">
+      <a href="https://wa.me/5511980506190" target="_blank">WhatsApp</a>
+      <a href="#" target="_blank">iFood</a>
+      <a href="quem-somos.html">Quem Somos</a>
+    </div>
+  </div>
+</body>
+</html>
