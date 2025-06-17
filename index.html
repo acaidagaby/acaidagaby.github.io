@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Açaí & Delícias</title>
   <style>
-    /* Reset & base */
     html, body {
       margin: 0;
       padding: 0;
@@ -12,20 +11,17 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* Fundo lilás + imagem centralizada sem zoom */
     body {
       background: #E8D6FF url('fundo.jpg') no-repeat center center fixed;
-      background-size: contain; /* mostra a imagem inteira */
+      background-size: contain;
     }
 
-    /* Container principal para posicionamentos absolutos */
     .container {
       position: relative;
       width: 100%;
       height: 100%;
     }
 
-    /* Imagens "flutuantes" (coxinha, pote, copo) */
     .img-float {
       position: absolute;
       width: 200px;
@@ -37,7 +33,6 @@
       transform: scale(1.05) rotate(-2deg);
     }
 
-    /* Posições específicas de cada imagem */
     #img-coxinha {
       top: 60px;
       left: 40px;
@@ -48,10 +43,9 @@
     }
     #img-copo {
       bottom: 40px;
-      left: 40px; /* <–– AGORA NO CANTO INFERIOR‑ESQUERDO */
+      left: 40px;
     }
 
-    /* Imagem grande de açaí (anteriormente central, agora inferior‑direito) */
     #img-acai-main {
       position: absolute;
       bottom: 20px;
@@ -65,7 +59,6 @@
       transform: scale(1.05) rotate(2deg);
     }
 
-    /* Botões centrais */
     .btn-group {
       position: absolute;
       top: 50%;
@@ -76,7 +69,7 @@
     }
     .btn-group a {
       text-decoration: none;
-      background: #8B5CF6; /* roxo médio */
+      background: #8B5CF6;
       color: #fff;
       padding: 12px 22px;
       border-radius: 8px;
@@ -92,18 +85,14 @@
 </head>
 <body>
   <div class="container">
-    <!-- Imagens suspensas -->
     <img id="img-coxinha" class="img-float" src="coxinha2.jpg" alt="Coxinha deliciosa" />
-    <img id="img-pote"   class="img-float" src="pote açai.jpg" alt="Pote de açaí" />
-    <img id="img-copo"   class="img-float" src="copo açai.jpg" alt="Copo de açaí" />
-
-    <!-- Imagem principal de açaí (açai.jpg) no canto inferior‑direito -->
+    <img id="img-pote" class="img-float" src="pote açai.jpg" alt="Pote de açaí" />
+    <img id="img-copo" class="img-float" src="copo açai.jpg" alt="Copo de açaí" />
     <img id="img-acai-main" src="acai.jpg" alt="Açaí no canto" />
 
-    <!-- Botões centrais -->
     <div class="btn-group">
-      <a href="https://wa.me/5511980506190" target="_blank">WhatsApp</a>
-      <a href="#" target="_blank">iFood</a>
+      <a href="https://wa.me/5511988522216" target="_blank">WhatsApp</a>
+      <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/cantinhosabor-vila-iorio/5d6954c0-3616-4a4f-abad-848745099853?UTM_Medium=share" target="_blank">iFood</a>
       <a href="quem-somos.html">Quem Somos</a>
     </div>
   </div>
