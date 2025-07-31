@@ -13,17 +13,9 @@
     }
 
     body {
-  background: #E8D6FF url('fundo.jpg') no-repeat center center fixed;
-  background-size: contain;
-}
-
-/* No mobile, trocamos pra cover */
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-  }
-}
-
+      background: #E8D6FF url('fundo.jpg') no-repeat center center fixed;
+      background-size: contain;
+    }
 
     .container {
       position: relative;
@@ -98,16 +90,22 @@
       transform: translateY(-3px);
     }
 
-    /* Ajustes responsivos */
+    /* RESPONSIVO */
     @media (max-width: 768px) {
+      body {
+        background-size: cover;
+      }
+
       .img-float {
         width: 140px;
         max-width: 35%;
       }
+
       #img-acai-main {
         width: 180px;
         max-width: 40%;
       }
+
       .btn-group {
         flex-direction: column;
         gap: 10px;
@@ -122,12 +120,14 @@
         margin: 10px auto;
         width: 80%;
       }
+
       #img-acai-main {
         position: static;
         display: block;
         margin: 10px auto;
         width: 80%;
       }
+
       .btn-group {
         position: static;
         transform: none;
