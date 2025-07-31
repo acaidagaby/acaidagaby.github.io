@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Açaí & Delícias</title>
   <style>
     html, body {
@@ -13,18 +14,21 @@
 
     body {
       background: #E8D6FF url('fundo.jpg') no-repeat center center fixed;
-      background-size: contain;
+      background-size: cover;
     }
 
     .container {
       position: relative;
       width: 100%;
       height: 100%;
+      padding: 10px;
+      box-sizing: border-box;
     }
 
     .img-float {
       position: absolute;
       width: 200px;
+      max-width: 40%;
       border-radius: 12px;
       box-shadow: 0 6px 14px rgba(0,0,0,.25);
       transition: transform .3s ease;
@@ -35,15 +39,15 @@
 
     #img-coxinha {
       top: 60px;
-      left: 40px;
+      left: 20px;
     }
     #img-pote {
       top: 60px;
-      right: 40px;
+      right: 20px;
     }
     #img-copo {
-      bottom: 40px;
-      left: 40px;
+      bottom: 60px;
+      left: 20px;
     }
 
     #img-acai-main {
@@ -51,6 +55,7 @@
       bottom: 20px;
       right: 20px;
       width: 260px;
+      max-width: 45%;
       border-radius: 14px;
       box-shadow: 0 6px 14px rgba(0,0,0,.25);
       transition: transform .3s ease;
@@ -65,7 +70,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
+      justify-content: center;
     }
     .btn-group a {
       text-decoration: none;
@@ -76,10 +83,50 @@
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(0,0,0,.2);
       transition: all .25s ease;
+      text-align: center;
     }
     .btn-group a:hover {
       background: #7C3AED;
       transform: translateY(-3px);
+    }
+
+    /* Ajustes responsivos */
+    @media (max-width: 768px) {
+      .img-float {
+        width: 140px;
+        max-width: 35%;
+      }
+      #img-acai-main {
+        width: 180px;
+        max-width: 40%;
+      }
+      .btn-group {
+        flex-direction: column;
+        gap: 10px;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .img-float {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+      #img-acai-main {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+      .btn-group {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 8px;
+      }
     }
   </style>
 </head>
