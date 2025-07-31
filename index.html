@@ -13,9 +13,17 @@
     }
 
     body {
-      background: #E8D6FF url('fundo.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
+  background: #E8D6FF url('fundo.jpg') no-repeat center center fixed;
+  background-size: contain;
+}
+
+/* No mobile, trocamos pra cover */
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+}
+
 
     .container {
       position: relative;
